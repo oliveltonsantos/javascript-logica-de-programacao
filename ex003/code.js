@@ -5,6 +5,6 @@ function Verificar() {
 
     var res = window.document.querySelector('div.msg')
 
-    res.innerHTML = `<p>O funcionário(a) ${nomef.value} tem um salário de R$${salf.value} em Junho.</p>`
+    res.innerHTML = `<p>O funcionário(a) ${nomef.value} teve um salário de R$${salf.value} em Junho.</p>`
 
 }
