@@ -3,5 +3,10 @@ function Mensagem() {
 
     var resp = window.document.querySelector('div.res')
 
-    resp.innerHTML = `<p>Olá, ${nome.value}! É um prazer conhecer você!</p>`
+    if (nome.value == 0) {
+        window.alert('Digite o seu nome!')
+    } else {
+        resp.innerHTML = `<p>Olá, ${nome.value}! É um prazer conhecer você!</p>`
+    }
+
 }

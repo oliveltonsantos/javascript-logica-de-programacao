@@ -5,6 +5,9 @@ function Verificar() {
 
     var res = window.document.querySelector('div.msg')
 
-    res.innerHTML = `<p>O funcionário(a) ${nomef.value} teve um salário de R$${salf.value} em Junho.</p>`
-
+    if (nomef.value == 0 || salf.value == 0) {
+        window.alert('Insira as informações solicitadas!')
+    } else {
+        res.innerHTML = `<p>O(A) funcionário(a) ${nomef.value} teve um salário de R$${salf.value} em Junho.</p>`
+    }
 }
