@@ -1,4 +1,4 @@
-function Verificar() {
+function Adicionar() {
     var nomef = window.document.getElementById('txtnomef')
 
     var salf = window.document.getElementById('txtsalf')
