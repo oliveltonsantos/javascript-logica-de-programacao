@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de logica de programação</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <section class="design-section">
+
+        <h1>Conversor de reais para dólares e vice-versa</h1>
+
+        <p>Digite um valor: <input type="number" name="txtdin" id="txtdin"></p>
+
+        <p> Escolha a moeda:
+            <input type="radio" name="radin" id="r_reais" checked>
+            <label for="radioreais">Reais</label>
+
+
+            <input type="radio" name="radin" id="r_dolar">
+            <label for="radiodolar">Dólar</label>
+        </p>
+
+
+        <p>
+            <input type="button" value="Converter" onclick="conversao()">
+        </p>
+
+        <div class="res"></div>
+
+    </section>
+
+    <script src="./codigo.js"></script>
+
+</body>
+
+</html>
