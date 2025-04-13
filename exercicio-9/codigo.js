@@ -1,8 +1,7 @@
 function conversao() {
-    var dinheiro = document.getElementById('txtdin')
 
-    // DEIXAR O VALOR COM DUAS CASAS DECIMAIS
-    var dinheiroFor = parseFloat(dinheiro.value).toFixed(2)
+    // Mesmo que o input seja do tipo number, o que você recebe é uma string. Sempre. Mesmo sendo <input type="number">.
+    var dinheiro = document.getElementById('txtdin')
 
     var res = document.querySelector('div.res')
 
@@ -10,21 +9,19 @@ function conversao() {
         window.alert('Digite um valor!')
     } else {
 
+        // Conversão de valor de STRING para NÚMERO
+        var dinheiroValor = parseFloat(dinheiro.value)
+
         // PEGA O NOME DO INPUT RADIO
-        var inputRad = document.getElementsByName('radin')
+        var inputRadio = document.getElementsByName('radin')
 
         // O "inputRad[0] indica qual é o input selecionado"
-
-        if (inputRad[0].checked) {
-            var convReais = dinheiroFor * 3.45
-            // DEIXAR O VALOR COM DUAS CASAS DECIMAIS
-            var convForR = convReais.toFixed(2)
-            res.innerHTML = `O valor de U$$${dinheiroFor} é igual a R$${convForR}`
+        if (inputRadio[0].checked) {
+            var valorReais = dinheiroValor * 3.45
+            res.innerHTML = `O valor de ${dinheiroValor.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} é igual a ${valorReais.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
         } else {
-            var convDolar = dinheiroFor / 3.45
-            // DEIXAR O VALOR COM DUAS CASAS DECIMAIS
-            var convForD = convDolar.toFixed(2)
-            res.innerHTML = `O valor de R$${dinheiroFor} é igual U$$${convForD}`
+            var valorDolar = dinheiroValor / 3.45
+            res.innerHTML = `O valor de ${dinheiroValor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} é igual a ${valorDolar.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`
         }
     }
 }
