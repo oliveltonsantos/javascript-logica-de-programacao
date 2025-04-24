@@ -47,3 +47,11 @@ input[type="text"] {
     border: 1px solid;
     padding: 5px;
 }
+
+button {
+    background: #F8F9FA;
+    border-radius: 50px;
+    border: 1px solid;
+    padding: 10px;
+    cursor: pointer;
+}
