@@ -8,5 +8,4 @@ function Mensagem() {
     } else {
         resp.innerHTML = `<p>Olá, ${nome.value}! É um prazer conhecer você!</p>`
     }
-
 }

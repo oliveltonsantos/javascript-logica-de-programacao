@@ -15,5 +15,4 @@ function calculo() {
         var delta = (B ** 2) - (4 * A * C)
         res.innerHTML = `O valor de Delta é igual a ${delta}`
     }
-
 }
