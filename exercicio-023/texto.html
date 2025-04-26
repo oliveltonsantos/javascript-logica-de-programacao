@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de logica de programação</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <section class="design-section">
+
+        <h1>Promoção Dia das Mulheres</h1>
+
+        <p>Selecione o seu sexo abaixo:</p>
+        <p>
+            <input type="radio" name="sexocliente" id="sexofeminino" checked>
+            <label for="sexofeminino">Feminino</label>
+
+            <input type="radio" name="sexocliente" id="sexomasculino">
+            <label for="sexomasculino">Masculino</label>
+        </p>
+
+        <p>Nome: <input type="text" name="nomecliente" id="nomecliente"></p>
+
+        <p>Valor da compra R$: <input type="number" name="valorcompra" id="valorcompra"></p>
+
+        <button onclick="calcular()">calcular</button>
+
+        <div class="res"></div>
+
+    </section>
+
+    <script src="./codigo.js"></script>
+
+</body>
+
+</html>
