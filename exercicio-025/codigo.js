@@ -15,10 +15,11 @@ function verificar() {
 
     if (isNaN(segmento1) || isNaN(segmento2) || isNaN(segmento3) || segmento1 <= 0 || segmento2 <= 0 || segmento3 <= 0) {
         alert('Insira valores válidos.')
+        return
     }
 
     if (segmento1 < segmento2 + segmento3 && segmento2 < segmento1 + segmento3 && segmento3 < segmento1 + segmento2) {
-        res.innerHTML = '<p>As medidas formam um triâgulo.</p>'
+        res.innerHTML = '<p>As medidas formam um triângulo.</p>'
     } else {
         res.innerHTML = '<p>As medidas não formam um triângulo.</p>'
     }
