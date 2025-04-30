@@ -18,6 +18,3 @@ function calcular() {
         res.innerHTML = `<p>O preço a ser pago para percorrer ${distancia} KM é ${precoMaisKm.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>`
     }
 }
-
-
-

@@ -11,6 +11,7 @@ function verificar() {
 
     if (isNaN(nota1) || isNaN(nota2) || nota1 <= 0 || nota2 <= 0) {
         alert('Insira dados válidos.')
+        return
     }
 
     var media = (nota1 + nota2) / 2

@@ -24,4 +24,3 @@ function calcular() {
         res.innerHTML = `<p>${stringNomeCliente}, o valor a ser pago com <strong>5%</strong> de desconto é <strong>${precoFinalHomem.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</strong></p>`
     }
 }
-

@@ -15,7 +15,7 @@ function comparar() {
     }
 
     if (valor1 > valor2) {
-        res.innerHTML = '<p>O primeiro valor é o maior.<p>'
+        res.innerHTML = '<p>O primeiro valor é o maior.</p>'
     } else if (valor2 > valor1) {
         res.innerHTML = '<p>O segundo valor é o maior.</p>'
     } else {
