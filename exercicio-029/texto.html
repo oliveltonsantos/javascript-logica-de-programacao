@@ -11,15 +11,25 @@
 <body>
     <section class="design-section">
 
-        <h1>Classificador de terrenos</h1>
+        <h1>Seu novo salário</h1>
 
         <p>Preencha os dados abaixo:</p>
 
-        <p>Largura: <input type="number" name="larguraTerreno" id="larguraTerreno"> metros</p>
+        <p>Nome do funcionário:</p>
 
-        <p>Comprimento: <input type="number" name="comprimentoTerreno" id="comprimentoTerreno"> metros</p>
+        <input type="text" name="nomeFuncionario" id="nomeFuncionario">
 
-        <button onclick="analisar()">Analisar</button>
+        <p>Salário:</p>
+
+        <input type="number" name="salario" id="salario">
+
+        <p>Quantos anos atua na empresa?</p>
+
+        <input type="text" name="anos" id="anos">
+
+        <br>
+
+        <button onclick="calcular()">Calcular</button>
 
         <div class="resposta"></div>
 

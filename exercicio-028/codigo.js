@@ -1,27 +1,25 @@
 function analisar() {
-    const larguraTerreno = document.getElementById('larguraTerreno')
-    const comprimentoTerreno = document.getElementById('comprimentoTerreno')
+    const largura = Number(document.getElementById('larguraTerreno').value)
+    const comprimento = Number(document.getElementById('comprimentoTerreno').value)
 
     const resposta = document.querySelector('div.resposta')
 
-    const stringLarguraTerreno = larguraTerreno.value
-    const stringComprimentoTerreno = comprimentoTerreno.value
-
-    const larguraTerrenoConversao = Number(stringLarguraTerreno)
-    const comprimentoTerrenoConversao = Number(stringComprimentoTerreno)
-
-    if (isNaN(larguraTerrenoConversao) || isNaN(comprimentoTerrenoConversao) || larguraTerrenoConversao <= 0 || comprimentoTerrenoConversao <= 0) {
+    if (isNaN(largura) || isNaN(comprimento) || largura <= 0 || comprimento <= 0) {
         alert('Insira dados válidos.')
         return
     }
 
-    const areaTerreno = larguraTerrenoConversao * comprimentoTerrenoConversao
+    const area = largura * comprimento
+    let classificacao = ''
 
-    if (areaTerreno < 100) {
-        resposta.innerHTML = `<p>Área: ${areaTerreno} m2 | TERRENO POPULAR</p>`
-    } else if (areaTerreno >= 100 && areaTerreno <= 500) {
-        resposta.innerHTML = `<p>Área: ${areaTerreno} m2 | TERRENO MASTER</p>`
+    if (area < 100) {
+        classificacao = 'TERRENO POPULAR'
+    } else if (area <= 500) {
+        classificacao = 'TERRENO MASTER'
     } else {
-        resposta.innerHTML = `<p>Área: ${areaTerreno} | TERRENO VIP</p>`
+        classificacao = 'TERRENO VIP'
     }
+
+    resposta.innerHTML = `<p>Área: ${area.toFixed(2)} m2 | ${classificacao}</p>`
 }
+
