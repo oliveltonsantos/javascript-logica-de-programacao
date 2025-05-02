@@ -25,7 +25,7 @@ function analisar() {
             // ESCALENO: todos os lados diferentes
             classificacao = 'Escaleno'
         }
-        resposta.innerHTML += `<p>Tipo: ${classificacao}<p>`
+        resposta.innerHTML += `<p>Tipo: ${classificacao}</p>`
     } else {
         resposta.innerHTML = '<p>Não é possível formar um triângulo.</p>'
     }

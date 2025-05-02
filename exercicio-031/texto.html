@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de logica de programação</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <section class="design-section">
+
+        <h1>Jogo - Pedra, papel e tesoura</h1>
+
+        <p>Regras do jogo:</p>
+
+        <p> - Pedra ganha da tesoura (amassando-a ou quebrando-a). <br>
+            - Tesoura ganha do papel (cortando-o). <br>
+            - Papel ganha da pedra (embrulhando-a).
+        </p>
+
+        <p>Escolha um objeto para jogar:</p>
+
+        <p>
+            <label><input type="radio" name="jogador" value="Pedra">Pedra</label>
+
+            <label><input type="radio" name="jogador" value="Papel">Papel</label>
+
+            <label><input type="radio" name="jogador" value="Tesoura">Tesoura</label>
+        </p>
+
+        <button onclick="jogar()">Jogar!</button>
+
+        <div class="resposta"></div>
+
+    </section>
+
+    <script src="./codigo.js"></script>
+
+</body>
+
+</html>
