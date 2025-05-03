@@ -11,16 +11,24 @@
 <body>
     <section class="design-section">
 
-        <h1>Oráculo dos números</h1>
+        <h1>Qual número será sorteado pela IA?</h1>
 
-        <p>Insira um número de 1 à 5.</p>
+        <p>Insira um número de 1 à 5 para tentar adivinhar!</p>
 
-        <p><input type="number" name="numero" id="numero"></p>
+        <p><input type="number" name="jogador" id="jogador"></p>
+
         <button onclick="adivinhar()">Ver resultado</button>
-        
+
+        <br>
+
+        <button onclick="jogarNovamente()">Jogar novamente</button>
+
+        <div class="resposta"></div>
+
     </section>
 
     <script src="./codigo.js"></script>
 
 </body>
+
 </html>
