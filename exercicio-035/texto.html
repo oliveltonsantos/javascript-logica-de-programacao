@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de logica de programação</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <section class="design-section">
+
+        <h1>AlugaCars</h1>
+
+        <p>Qual modelo de carro deseja alugar?</p>
+
+        <p>
+            <input type="radio" name="modeloCarro" id="popular" checked>
+            <label for="popular">Popular</label>
+
+            <input type="radio" name="modeloCarro" id="luxo">
+            <label for="luxo">Luxo</label>
+        </p>
+
+        <p>Dias alugados: <input type="number" name="diasAlugados" id="diasAlugados"></p>
+
+        <p>Quilômetros percorridos: <input type="number" name="kmPercorridos" id="kmPercorridos"> km</p>
+
+        <button onclick="calcular()">Ver valor</button>
+
+        <br>
+
+        <button onclick="limparResultado()" class="btnLimpar">Limpar resultado</button>
+
+        <div class="resposta"></div>
+
+    </section>
+
+    <script src="./codigo.js"></script>
+
+</body>
+
+</html>
