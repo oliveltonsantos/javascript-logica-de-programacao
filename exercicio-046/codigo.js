@@ -28,3 +28,5 @@ function calcular() {
 
 }
 
+console.log('Olá!')
+
