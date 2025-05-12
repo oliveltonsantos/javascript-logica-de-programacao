@@ -4,9 +4,12 @@ const inputPassos = document.getElementById('passos')
 const resposta = document.querySelector('div.resposta')
 
 function calcular() {
+
+    resposta.innerHTML = '' // Limpa a resposta, evitando que várias respostas se acumulem
+
     let inicio = Number(inputInicio.value)
-    let fim = Number(inputFim.value)
-    let passos = Number(inputPassos.value)
+    const fim = Number(inputFim.value)
+    const passos = Number(inputPassos.value)
 
     if (isNaN(inicio) || isNaN(fim) || isNaN(passos) || passos <= 0) {
         alert('Insira valores válidos.')
@@ -16,17 +19,25 @@ function calcular() {
     let exibicao = ''
 
     while (inicio <= fim) {
-        soma += inicio // soma = soma + inicio => soma o número atual
-        exibicao += inicio // exibicao = exibicao + inicio
+        soma += inicio // Adiciona o valor atual de "inicio" à variável "soma", acumulando a soma dos números.
+        exibicao += inicio // Adiciona o número atual à string que vai mostrar a conta, por exemplo: 1 + 3 + 5 + ...
+
+        // Só adiciona o sinal de "+" se "inicio + passos" ainda for menor ou igual ao "fim".
         if (inicio + passos <= fim) {
-            exibicao += ' + ' // exibicao = exibicao + ' + '
+            exibicao += ' + '
         }
-        inicio += passos // inicio = inicio + passos => vai para o próximo número
+        inicio += passos // Aumenta o número atual
     }
 
     resposta.innerHTML += `<p>${exibicao} = ${soma}</p>`
 
 }
 
-console.log('Olá!')
+function limpar() {
+    inputInicio.value = ''
+    inputFim.value = ''
+    inputPassos.value = ''
+    resposta.innerHTML = ''
+    inputInicio.focus()
+}
 
