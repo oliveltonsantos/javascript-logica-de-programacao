@@ -2,7 +2,7 @@ const numeros = [] // Cria um array para armazenar os números
 
 const inputNumero = document.getElementById('numero')
 
-// Atalho: permitir Enter para adicionar
+// Atalho: permite Enter para adicionar
 inputNumero.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         adicionarNumero()
