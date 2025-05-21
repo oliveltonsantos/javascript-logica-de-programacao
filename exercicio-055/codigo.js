@@ -11,13 +11,13 @@ const btnJogar = document.querySelector('button.btnJogar')
 const btnRecomecar = document.querySelector('button.btnRecomecar')
 const resposta = document.querySelector('div.resposta')
 
-// Array que vai receber os números do usuário
+// Armazena os números digitados pelo jogador
 let tentativasJogador = []
 
+// Sorteia um número de 1 a 10
 let numeroSecreto = sortearNumero()
 
 
-// Sorteia um número de 1 a 10
 function sortearNumero() {
     return Math.floor(Math.random() * 10) + 1
 }
