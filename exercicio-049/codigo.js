@@ -47,9 +47,9 @@ function analisarNumeros() {
 
     for (let contador = 0; contador < numerosAdicionados.length; contador++) {
         if (numerosAdicionados[contador] % 2 === 0) {
-            numerosPares = numerosPares + 1
+            numerosPares++ // numerosPares = numerosPares + 1
         } else {
-            numerosImpares = numerosImpares + 1
+            numerosImpares++ // numerosImpares = numerosImpares + 1
         }
     }
 

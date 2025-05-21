@@ -46,7 +46,6 @@ function somarNumeros() {
 
     let soma = 0
 
-
     // Aqui também poderia ter sido usado o "for" ou "while"
     for (let cadaNumero of numeros) {
         soma += cadaNumero
