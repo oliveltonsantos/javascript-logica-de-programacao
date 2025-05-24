@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de logica de programação</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <section class="design-section">
+
+        <h1>Cadastro de funcionários</h1>
+
+        <p>Finalize o cadastro digitando o número "0", no campo "Salário" e "Sexo". Depois clique em "Adicionar".</p>
+
+        <p>Salário: <input type="number" name="salario" id="salario"></p>
+
+        <p>Digite: "F" para "Sexo Feminino" | "M" para "Sexo Masculino"</p>
+
+        <p>Sexo: <input type="text" name="sexo" id="sexo"></p>
+
+        <button onclick="adicionar()" class="btnAdicionar">Adicionar</button>
+
+        <button onclick="recomecar()" class="btnRecomecar">Recomeçar</button>
+
+        <div class="resposta"></div>
+
+    </section>
+
+    <script src="./codigo.js"></script>
+
+</body>
+
+</html>
