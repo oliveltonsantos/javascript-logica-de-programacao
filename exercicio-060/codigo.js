@@ -74,22 +74,19 @@ function adicionar() {
     } else {
 
         let somaIdades = 0
-        let idadeMediaGrupo = 0
         let maiorIdadeGrupo = listaIdade[0]
         let pessoaMaisVelha = listaNome[0]
 
         for (let contador = 0; contador < listaIdade.length; contador++) {
-            somaIdades = somaIdades + listaIdade[contador]
-        }
+            somaIdades += listaIdade[contador]
 
-        idadeMediaGrupo = somaIdades / listaIdade.length
-
-        for (let contador = 1; contador < listaIdade.length; contador++) {
             if (listaIdade[contador] > maiorIdadeGrupo) {
                 maiorIdadeGrupo = listaIdade[contador]
                 pessoaMaisVelha = listaNome[contador]
             }
         }
+
+        const idadeMediaGrupo = somaIdades / listaIdade.length
 
         let idadeMulherJovem = null
         let nomeMulherJovem = listaNome[0]
