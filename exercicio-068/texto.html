@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de logica de programação</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <section class="design-section">
+
+        <h1>Analisador de peso</h1>
+
+        <p>Insira o sexo e o peso de 8 pessoas abaixo.</p>
+
+        <p>Digite "F" para "Sexo Feminino" | "M" para "Sexo Masculino"</p>
+
+        <p>Sexo: <input type="text" name="sexo" id="sexo"></p>
+
+        <p>Peso: <input type="number" name="peso" id="peso"> KG</p>
+
+        <button onclick="adicionar()" class="btnAdicionar">Adicionar</button>
+
+        <button onclick="analisar()" class="btnAnalisar">Analisar</button>
+
+        <button onclick="cadastrar()" class="btnCadastrar">Cadastrar mais pessoas</button>
+
+        <div class="resposta"></div>
+    </section>
+
+    <script src="./codigo.js"></script>
+
+</body>
+
+</html>
