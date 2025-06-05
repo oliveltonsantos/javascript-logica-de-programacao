@@ -14,7 +14,7 @@ const resposta = document.querySelector('div.resposta')
 
 function contar() {
     let primeiroTermo = Number(inputTermo.value)
-    let razaoPA = Number(inputRazao.value)
+    const razaoPA = Number(inputRazao.value)
 
     if (isNaN(primeiroTermo) || isNaN(razaoPA)) {
         alert('Insira o valor válido.')
