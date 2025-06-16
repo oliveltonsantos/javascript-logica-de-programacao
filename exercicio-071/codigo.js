@@ -27,7 +27,7 @@ function adicionar() {
 
     listaNumeros.push(numero)
 
-    mensagem.innerHTML = `${listaNumeros.join(' | ')}`
+    mensagem.innerHTML = listaNumeros.map((valor, indice) => `[${indice}] - ${valor}`).join(' 👉 ')
 
     inputNumero.value = ''
     inputNumero.focus()

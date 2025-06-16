@@ -4,14 +4,14 @@ let listaNumeros = []
 
 function gerar() {
 
-    listaNumeros.length = 0 // Limpa o array antes de começar
+    for (let contador = 0; contador < 10; contador++) {
 
-    let inicio = 5
-    let fim = 50
+        if (contador % 2 == 0) {
+            listaNumeros.push(5)
+        } else {
+            listaNumeros.push(3)
+        }
 
-    while (inicio <= fim) {
-        listaNumeros.push(inicio)
-        inicio += 5
     }
 
     const respostaFormatada = listaNumeros.map((valor, indice) => `[${indice}] - ${valor}`).join(' 👉 ')
@@ -19,7 +19,3 @@ function gerar() {
     resposta.innerHTML = respostaFormatada
 
 }
-
-
-
-

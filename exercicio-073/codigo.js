@@ -12,6 +12,8 @@ function gerador() {
         listaNumeros.push(fim)
     }
 
-    resposta.innerHTML = `Lista de números: ${listaNumeros.join(' | ')}`
+    respostaFormatada = listaNumeros.map((valor, indice) => `[${indice}] - ${valor}`).join(' 👉 ')
+
+    resposta.innerHTML = respostaFormatada
 
 }
