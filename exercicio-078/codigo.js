@@ -16,20 +16,20 @@ let listaNumeros = []
 
 function adicionar() {
 
-    const numero = Number(inptutNumero.value)
+    const valorDigitado = inptutNumero.value
 
-    if (isNaN(numero) || numero == '') {
+    if (valorDigitado === '' || isNaN(Number(valorDigitado))) {
         alert('Insira apenas números.')
         inptutNumero.value = ''
         inptutNumero.focus()
         return
     }
 
-    listaNumeros.push(numero)
+    listaNumeros.push(valorDigitado)
 
     resposta.innerHTML = `Quantidade de números adicionados: ${listaNumeros.length}`
 
-    if (listaNumeros.length > 5) {
+    if (listaNumeros.length > 14) {
 
         inptutNumero.disabled = true
         btnAdicionar.style.display = 'none'
