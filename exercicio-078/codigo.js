@@ -43,7 +43,11 @@ function adicionar() {
             .map(item => `[${item.indice}] - ${item.valor}`)
             .join(' 👉 ')
 
-        resposta.innerHTML += `<p>Múltiplos de 10: ${multiplosDe10}</p>`
+        if (multiplosDe10.length === 0) {
+            resposta.innerHTML += 'Nenhum múltiplo de 10 foi encontrado.'
+        } else {
+            resposta.innerHTML += `<p>Múltiplos de 10: ${multiplosDe10}</p>`
+        }
 
     }
 
