@@ -57,3 +57,6 @@ button {
     margin: 10px;
 }
 
+.btnRecomecar {
+    display: none;
+}
