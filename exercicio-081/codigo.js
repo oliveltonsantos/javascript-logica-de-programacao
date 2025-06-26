@@ -52,9 +52,14 @@ function adicionar() {
 
             if (listaIdades[contador] > maiorIdade) {
                 maiorIdade = listaIdades[contador]
-                maiorIdadePosicao = contador
             }
         }
+
+        const posicoesMaiorIdade = listaIdades
+            .map((valor, indice) => ({ indice, valor }))
+            .filter(item => item.valor === maiorIdade)
+            .map(item => `[${item.indice}]`)
+            .join(' 👉 ')
 
         const idadeMais25 = listaIdades
             .map((valor, indice) => ({ indice, valor }))
@@ -74,10 +79,11 @@ function adicionar() {
 
         // Retorno da análise
         resposta.innerHTML = `
+        <p>Idades cadastradas: ${listaIdades.join(' | ')}</p>
         <p>Idade média: ${idadeMedia} ano(s).</p>
         <p>Idades maiores que 25 (indíce): ${respostaIdadeMais25}</p>
         <p>Maior idade: ${maiorIdade} anos.</p>
-        <p>Indíce da maior idade: ${maiorIdadePosicao}</p>
+        <p>Posições da maior idade: ${posicoesMaiorIdade}</p>
     `
 
         inputIdade.disabled = true
