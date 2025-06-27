@@ -18,6 +18,7 @@ function adicionar() {
     const notaDigitada = inputNota.value
     const nota = Number(notaDigitada)
 
+    // Validação dos dados inseridos
     if (notaDigitada === '' || isNaN(nota)) {
         alert('Digite um valor válido.')
         inputNota.value = ''
@@ -25,13 +26,14 @@ function adicionar() {
         return
     }
 
+    // Colocando as notas no array
     listaNotas.push(nota)
-
     resposta.innerHTML = `<p>${listaNotas.length} notas adicionadas.<p>`
 
     inputNota.value = ''
     inputNota.focus()
 
+    // Análise das notas
     if (listaNotas.length > 9) {
 
         let somaNotas = 0
@@ -60,6 +62,7 @@ function adicionar() {
             }
         }
 
+        // Apresentação da análise
         resposta.innerHTML = `
             <p>Notas adicionadas: ${listaNotas.join(' | ')}</p>
             <p>Nota média: ${notaMedia}</p>
