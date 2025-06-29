@@ -11,9 +11,17 @@
 <body>
     <section class="design-section">
 
-        <h1>Gerador de números aleatórios</h1>
+        <h1>Cadastro de pessoas</h1>
 
-        <button onclick="gerar()">Gerar sequência</button>
+        <p>Insira o nome e idade de 9 pessoas.</p>
+
+        <p>Nome: <input type="text" name="nome" id="nome"></p>
+
+        <p>Idade: <input type="number" name="idade" id="idade"></p>
+
+        <button onclick="adicionar()" class="btnAdicionar">Adicionar</button>
+
+        <button onclick="cadastrar()" class="btnCadastrar">Cadastrar mais</button>
 
         <div class="resposta"></div>
 

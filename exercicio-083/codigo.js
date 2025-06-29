@@ -4,22 +4,24 @@ let listaNumeros = []
 
 function gerar() {
 
+    listaNumeros.length = 0
+
     for (let contador = 0; contador < 20; contador++) {
 
-        let numerosAleatorios = Math.floor(Math.random() * 99) + 1
+        let numeroAleatorio = Math.floor(Math.random() * 99) + 1
 
-        listaNumeros.push(numerosAleatorios)
-
-        resposta.innerHTML = `<p>Lista aleatória: ${listaNumeros.join(' | ')}</p>`
-
+        listaNumeros.push(numeroAleatorio)
     }
 
-    for (let contador = 0; contador < 20; contador++) {
-        for (contador2 = contador + 1; contador2 < 20; contador2++) {
-            if (listaNumeros[contador] > listaNumeros[contador2]) {
-                let valorTemporario = listaNumeros[contador]
-                listaNumeros[contador] = listaNumeros[contador2]
-                listaNumeros[contador2] = valorTemporario
+    resposta.innerHTML = `<p>Lista aleatória: ${listaNumeros.join(' | ')}</p>`
+
+    for (let indiceAtual = 0; indiceAtual < 20; indiceAtual++) {
+
+        for (let indiceComparado = indiceAtual + 1; indiceComparado < 20; indiceComparado++) {
+            if (listaNumeros[indiceAtual] > listaNumeros[indiceComparado]) {
+                let valorTemporario = listaNumeros[indiceAtual]
+                listaNumeros[indiceAtual] = listaNumeros[indiceComparado]
+                listaNumeros[indiceComparado] = valorTemporario
             }
         }
     }
