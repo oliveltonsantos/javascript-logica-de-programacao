@@ -12,8 +12,10 @@ const btnAdicionar = document.querySelector('button.btnAdicionar')
 const btnCadastrar = document.querySelector('button.btnCadastrar')
 const resposta = document.querySelector('div.resposta')
 
+
 let listaNomes = []
 let listaIdades = []
+
 
 function adicionar() {
     const nome = inputNome.value
@@ -44,16 +46,21 @@ function adicionar() {
 
     if (listaNomes.length > 8) {
 
-        resposta.innerHTML = '<p>Pessoas menores de idade:</p>'
+        const menoresDeIdade = listaIdades
+            .map((valor, indice) => ({ indice, valor }))
+            .filter(item => item.valor <= 18)
+            .map(item => `${listaNomes[item.indice]} => ${item.valor} anos.`)
+            .join('<br>')
 
-        for (contador = 0; contador < listaIdades.length; contador++) {
-            if (listaIdades[contador] < 18) {
-                resposta.innerHTML += `<p>${listaNomes[contador]} => ${listaIdades[contador]} anos.</p>`
-            }
-        }
+        resposta.innerHTML = `
+            <p>Pessoas menores de idade:</p>
+            <p>${menoresDeIdade}</p>
+
+        `
 
         inputNome.disabled = true
         inputIdade.disabled = true
+
         btnAdicionar.style.display = 'none'
         btnCadastrar.style.display = 'inline-block'
     }
@@ -76,3 +83,5 @@ function cadastrar() {
 
     resposta.innerHTML = ''
 }
+
+
