@@ -19,7 +19,8 @@ let listaIdades = []
 
 function adicionar() {
     const nome = inputNome.value
-
+    
+    // Validação dos dados
     if (nome.trim() === '') {
         alert('Insira um nome abaixo.')
         inputNome.focus()
@@ -36,6 +37,7 @@ function adicionar() {
         return
     }
 
+    // Adiciona os dados ao array
     listaNomes.push(nome)
     listaIdades.push(idade)
     resposta.innerHTML = `${listaNomes.length} pessoas foram adicionadas.`
@@ -44,6 +46,7 @@ function adicionar() {
     inputNome.value = ''
     inputNome.focus()
 
+    // Análise dos dados
     if (listaNomes.length > 8) {
 
         const menoresDeIdade = listaIdades
