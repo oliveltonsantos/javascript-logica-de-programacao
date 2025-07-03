@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de logica de programação</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <section class="design-section">
+
+        <h1>Mensagem personalizada com bordas</h1>
+
+        <p>Escolha sua borda preferida, insira apenas o número do seu interesse.</p>
+
+        <p>Opção 1: +-------=======------+</p>
+
+        <p>Opção 2: ~~~~~~~~:::::::~~~~~~~</p>
+
+        <p>Opção 3: <<<<<<<<------->>>>>>></p>
+
+        <p>Opção escolhida: <input type="number" name="borda" id="borda"></p>
+
+        <p>Mensagem: <input type="text" name="mensagem" id="mensagem"></p>
+
+        <button onclick="mensagemGerada()" class="btnMensagemGerada">Ver mensagem</button>
+
+        <button onclick="mensagemNova()" class="btnNovaMensagem">Nova mensagem</button>
+
+        <div class="resposta"></div>
+        
+    </section>
+
+    <script src="./codigo.js"></script>
+
+</body>
+</html>
