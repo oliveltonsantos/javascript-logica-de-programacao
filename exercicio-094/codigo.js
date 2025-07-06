@@ -23,7 +23,7 @@ function gerarSequencia() {
 
 function fibonacci(termoPassado) {
 
-    let sequenciaFibonacci = []
+    const sequenciaFibonacci = []
 
     if (termoPassado >= 1) sequenciaFibonacci.push(1)
     if (termoPassado >= 2) sequenciaFibonacci.push(1)
@@ -33,7 +33,7 @@ function fibonacci(termoPassado) {
 
     for (contador = 3; contador <= termoPassado; contador++) {
 
-        let termo3 = termo1 + termo2
+        const termo3 = termo1 + termo2
         termo1 = termo2
         termo2 = termo3
 
