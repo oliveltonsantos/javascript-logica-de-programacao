@@ -4,7 +4,11 @@ const btnSomador = document.querySelector('button.btnSomador')
 const btnNovaSoma = document.querySelector('button.btnNovaSoma')
 const resposta = document.querySelector('div.resposta')
 
-function somador() {
+function somador(valor1, valor2) {
+    return valor1 + valor2
+}
+
+function resultado() {
     const valor1Digitado = inputValor1.value
     const valor1Recebido = Number(valor1Digitado)
 
@@ -25,19 +29,15 @@ function somador() {
         return
     }
 
-    const soma = valor1Recebido + valor2Recebido
+    const resultadoSoma = somador(valor1Recebido, valor2Recebido)
 
-    resultado(soma, valor1Recebido, valor2Recebido)
+    resposta.innerHTML = `<p>A soma de ${valor1Recebido} + ${valor2Recebido} = ${resultadoSoma}</p>`
 
     inputValor1.disabled = true
     inputValor2.disabled = true
     btnSomador.style.display = 'none'
     btnNovaSoma.style.display = 'inline-block'
 
-}
-
-function resultado(somaPassada, valor1Passado, valor2Passado) {
-    resposta.innerHTML = `<p>Soma de ${valor1Passado} + ${valor2Passado} = ${somaPassada}</p>`
 }
 
 function novaSoma() {
