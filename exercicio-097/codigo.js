@@ -6,14 +6,15 @@ const btnNovaAnalise = document.querySelector('button.btnNovaAnalise')
 const resposta = document.querySelector('div.resposta')
 
 function maior(numero1Passado, numero2Passado, numero3Passado) {
-    if (numero1Passado > numero2Passado && numero1Passado > numero3Passado) {
-        return numero1Passado
-    } else if (numero2Passado > numero3Passado) {
-        return numero2Passado
-    } else {
-        return numero3Passado
+    if (numero1Passado === numero2Passado && numero2Passado === numero3Passado) {
+        return '<p>Todos os números são iguais.</p>'
     }
 
+    let maiorNumero = numero1Passado
+    if (numero2Passado > maiorNumero) maiorNumero = numero2Passado
+    if (numero3Passado > maiorNumero) maiorNumero = numero3Passado
+
+    return `<p>O maior número é ${maiorNumero}.</p>`
 }
 
 function verAnalise() {
@@ -47,25 +48,32 @@ function verAnalise() {
         return
     }
 
-    let resultadoAnalise = maior(numero1Recebido, numero2Recebido, numero3Recebido)
+    const resultadoAnalise = maior(numero1Recebido, numero2Recebido, numero3Recebido)
 
-    resposta.innerHTML = `<p>O maior número é o ${resultadoAnalise}</p>`
+    resposta.innerHTML = resultadoAnalise
 
+    inputNumero1.disabled = true
+    inputNumero2.disabled = true
+    inputNumero3.disabled = true
 
-
-
-
-
-
-
-
-
-
-
+    btnAnalise.style.display = 'none'
+    btnNovaAnalise.style.display = 'inline-block'
 
 }
 
-//numero3Passado > numero1Passado || 
-        //numero3Passado > numero2Passado ||
-        //numero3Passado === numero1Passado ||
-        //numero3Passado === numero2Passado
+function novaAnalise() {
+    inputNumero1.disabled = false
+    inputNumero2.disabled = false
+    inputNumero3.disabled = false
+
+    inputNumero1.value = ''
+    inputNumero2.value = ''
+    inputNumero3.value = ''
+    inputNumero1.focus()
+
+    btnAnalise.style.display = 'inline-block'
+    btnNovaAnalise.style.display = 'none'
+
+    resposta.innerHTML = ''
+}
+
