@@ -6,16 +6,20 @@ const resposta = document.querySelector('div.resposta')
 
 function superSomador(numero1Passado, numero2Passado) {
 
-    const intervalo = numero2Passado - numero1Passado
+    // Garante que o número1 seja sempre o menor
+    if (numero1Passado > numero2Passado) {
+        let troca = numero1Passado
+        numero1Passado = numero2Passado
+        numero2Passado = troca
+    }
 
     const listaNumeros = []
 
     let somaTotal = 0
 
-    for (let contador = 0; contador <= intervalo; contador++) {
-        listaNumeros.push(numero1Passado)
-        numero1Passado = numero1Passado + 1
-        somaTotal = somaTotal + listaNumeros[contador]
+    for (let contador = numero1Passado; contador <= numero2Passado; contador++) {
+        listaNumeros.push(contador)
+        somaTotal += contador
     }
 
     return `
